@@ -1,1 +1,18 @@
-<p>chat works!</p>
+<div class="list" *ngFor="let item of this.myData0">
+    <div class="box-left" *ngIf="this.idUser === item.chatUser">
+        <span class="content-left">
+            {{item.chatMessage}}
+        </span>
+    </div>
+
+    <div class="box-right" *ngIf="this.idUser !== item.chatUser">
+        <span class="content-right">
+            {{item.chatMessage}}
+        </span>
+    </div>
+</div>
+<div class="ui form sticky">
+    <div class="ui field">
+        <input type="text" autofocus name="chat" [(ngModel)]="chat" name="chat" (keyup.enter)="send()" autocomplete="off" placeholder="Type here . . .">
+    </div>
+</div>
