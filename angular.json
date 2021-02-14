@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "uapps-chat"
+    }
+  },
+  "defaultProject": "uapps-chat",
+  "cli": {
+    "analytics": false
+  }
 }
